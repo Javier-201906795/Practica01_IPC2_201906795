@@ -1,4 +1,5 @@
 from Cuenta import Cuenta
+from FuncionesAhorro import Deposito
 
 #Clase Herencia
 class CuentaAhorro(Cuenta):

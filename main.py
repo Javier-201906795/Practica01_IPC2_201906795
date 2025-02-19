@@ -1,5 +1,5 @@
 from Ahorro import CuentaAhorro
-
+from FuncionesAhorro import Deposito
 
 if __name__ == "__main__":
 
@@ -12,5 +12,9 @@ if __name__ == "__main__":
     #Imprimir cuenta
     print(cuenta1.mostarinformacion())
     print(cuenta1.mostarsaldo())
+
+    #Depositar
+    Deposito()
+    
 
  
