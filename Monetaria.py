@@ -1,6 +1,6 @@
 from Cuenta import Cuenta
 
-class Monetaria(Cuenta):
+class CuentaMonetaria(Cuenta):
     def __init__(self, numerocuenta, titular, saldo, limite):
         super().__init__(numerocuenta, titular, saldo, 'Monetaria')
         self.__limite = limite
@@ -16,17 +16,17 @@ class Monetaria(Cuenta):
         return f'Cuenta No: {self.getnumerocuenta()}, Tipo: {self.gettipo()}, Titular: {self.gettitular()}, Saldo: {self.getsaldo()}, Límite Adicional: {self.getlimite()}'
     
     def mostarsaldo(self):
-        return f'Saldo: {self.getsaldo()}'
+        return f'Saldo: {self.getsaldo()} || Limite restante: {self.__limiterestante}'
     
     def depositar(self, monto):
         nuevosaldo = self.getsaldo() + monto
         self.setsaldo(nuevosaldo)
-        print(f'Nuevo deposito de {monto}! ')
+        print(f'-¡Nuevo deposito de {monto}! ')
 
     def retirar(self, monto):
         saldomax = self.getsaldo() + self.__limiterestante
         if monto > saldomax:
-            print('Saldo insuficiente Monetario')
+            print('-¡Saldo insuficiente Monetario!')
         else:
             #Restar al saldo
             nuevosaldo = self.getsaldo() - monto
@@ -42,4 +42,4 @@ class Monetaria(Cuenta):
             self.setsaldo(nuevosaldo)
                 
             #Restar al limite
-            print(f'Retiro realizado de {monto}! Saldo: {self.getsaldo()}, Limite finiciamiento restante: {self.__limiterestante}')
+            print(f'-¡Retiro realizado de {monto}!')
