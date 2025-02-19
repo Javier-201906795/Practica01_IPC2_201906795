@@ -23,4 +23,12 @@ class CuentaAhorro(Cuenta):
         nuevosaldo = self.getsaldo() + monto
         self.setsaldo(nuevosaldo)
         print(f'Nuevo deposito !')
+
+    def retirar(self, monto):
+        if monto > self.getsaldo():
+            print('Saldo insuficiente')
+        else:
+            nuevosaldo = self.getsaldo() - monto
+            self.setsaldo(nuevosaldo)
+            print(f'Retiro realizado !')
     
