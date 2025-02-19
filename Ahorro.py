@@ -22,7 +22,7 @@ class CuentaAhorro(Cuenta):
     def depositar(self, monto):
         nuevosaldo = self.getsaldo() + monto
         self.setsaldo(nuevosaldo)
-        print(f'Nuevo deposito ! ')
+        print(f'Nuevo deposito de {monto}! ')
 
     def retirar(self, monto):
         if monto > self.getsaldo():
@@ -30,12 +30,12 @@ class CuentaAhorro(Cuenta):
         else:
             nuevosaldo = self.getsaldo() - monto
             self.setsaldo(nuevosaldo)
-            print(f'Retiro realizado !')
+            print(f'Retiro realizado de {monto}!')
     
     def calcularinteres(self):
         saldo = self.getsaldo()
         intereseacumulado = saldo*self.__interes
         nuevosaldo = saldo + intereseacumulado
         self.setsaldo(nuevosaldo)
-        print(f'Interés acumulado: {intereseacumulado}')
+        print(f'Interés acumulado: {intereseacumulado}!')
     
