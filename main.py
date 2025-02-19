@@ -11,5 +11,6 @@ if __name__ == "__main__":
 
     #Imprimir cuenta
     print(cuenta1.informacion())
+    print(cuenta1.mostarsaldo())
 
  
