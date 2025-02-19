@@ -6,7 +6,7 @@ if __name__ == "__main__":
     DBCuentas = None
 
     #Crear cuenta
-    cuenta1 = CuentaAhorro(1,'Juan Lopez', 1000, 2)
+    cuenta1 = CuentaAhorro(1,'Juan Lopez', 1000, 0.1)
 
     #Imprimir cuenta
     print(cuenta1.mostarinformacion())
@@ -20,5 +20,8 @@ if __name__ == "__main__":
     cuenta1.retirar(50)
     print(cuenta1.mostarsaldo())
     
+    #Calcular Interes
+    cuenta1.calcularinteres()
+    print(cuenta1.mostarsaldo())
 
  
