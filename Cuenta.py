@@ -26,6 +26,6 @@ class Cuenta(ABC):
     
 
     @abstractmethod
-    def informacion(self):
+    def mostarinformacion(self):
         pass
 

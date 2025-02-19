@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cuenta1 = CuentaAhorro(1,'Juan Lopez', 1000, 2)
 
     #Imprimir cuenta
-    print(cuenta1.informacion())
+    print(cuenta1.mostarinformacion())
     print(cuenta1.mostarsaldo())
 
  
