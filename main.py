@@ -1,5 +1,6 @@
 from Ahorro import CuentaAhorro
 from Monetaria import CuentaMonetaria
+from FuncionesCuenta import *
 
 #Base de Datos Cuentas
 DBCuentas = []
@@ -77,3 +78,7 @@ if __name__ == "__main__":
     # print(DBCuentas[1].mostarinformacion())
 
     #----------------------------------------------------------------
+
+    print("hola mundo")
+    crearcuentaahorro()
+    crearcuentamonetaria()
