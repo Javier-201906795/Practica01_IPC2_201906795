@@ -1,5 +1,5 @@
 from Cuenta import Cuenta
-from FuncionesAhorro import Deposito
+
 
 #Clase Herencia
 class CuentaAhorro(Cuenta):
@@ -18,4 +18,9 @@ class CuentaAhorro(Cuenta):
 
     def mostarsaldo(self):
         return f'Saldo: {self.getsaldo()}'
+    
+    def depositar(self, monto):
+        nuevosaldo = self.getsaldo() + monto
+        self.setsaldo(nuevosaldo)
+        print(f'Saldo Actualizado Exitosamente !')
     

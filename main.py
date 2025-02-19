@@ -14,7 +14,9 @@ if __name__ == "__main__":
     print(cuenta1.mostarsaldo())
 
     #Depositar
-    Deposito(cuenta1,500)
+    cuenta1.depositar(100)
+    print(cuenta1.mostarsaldo())
+    #Deposito(cuenta1,500)
     
 
  
