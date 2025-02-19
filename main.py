@@ -1,10 +1,12 @@
 from Ahorro import CuentaAhorro
 from Monetaria import CuentaMonetaria
 
+#Base de Datos Cuentas
+DBCuentas = []
+
 if __name__ == "__main__":
 
-    #Base de Datos
-    DBCuentas = None
+    
 
     # #Crear cuenta
     # cuenta1 = CuentaAhorro(1,'Juan Lopez', 1000, 0.1)
@@ -25,7 +27,7 @@ if __name__ == "__main__":
     # cuenta1.calcularinteres()
     # print(cuenta1.mostarsaldo())
 
-
+    #----------------------------------------------------------------
     # #Crear cuenta2
     # cuenta2 = CuentaMonetaria(1,'Juan Lopez', 2000, 100)
 
@@ -64,3 +66,14 @@ if __name__ == "__main__":
     # #Depositar
     # cuenta2.depositar(100)
     # print(cuenta2.mostarsaldo())
+
+    #----------------------------------------------------------------
+
+    # Crear nueva cuenta
+    DBCuentas.append(CuentaAhorro(1,'Juan Lopez', 1000, 0.1))
+    DBCuentas.append(CuentaMonetaria(1,'Juan Lopez', 2000, 100))
+    # Print
+    print(DBCuentas[0].mostarinformacion())
+    print(DBCuentas[1].mostarinformacion())
+
+    #----------------------------------------------------------------
