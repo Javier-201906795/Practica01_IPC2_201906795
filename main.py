@@ -1,5 +1,4 @@
 from Ahorro import CuentaAhorro
-from FuncionesAhorro import Deposito
 
 if __name__ == "__main__":
 
