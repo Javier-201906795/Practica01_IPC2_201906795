@@ -69,11 +69,11 @@ if __name__ == "__main__":
 
     #----------------------------------------------------------------
 
-    # Crear nueva cuenta
-    DBCuentas.append(CuentaAhorro(1,'Juan Lopez', 1000, 0.1))
-    DBCuentas.append(CuentaMonetaria(1,'Juan Lopez', 2000, 100))
-    # Print
-    print(DBCuentas[0].mostarinformacion())
-    print(DBCuentas[1].mostarinformacion())
+    # # Crear nueva cuenta
+    # DBCuentas.append(CuentaAhorro(1,'Juan Lopez', 1000, 0.1))
+    # DBCuentas.append(CuentaMonetaria(1,'Juan Lopez', 2000, 100))
+    # # Print
+    # print(DBCuentas[0].mostarinformacion())
+    # print(DBCuentas[1].mostarinformacion())
 
     #----------------------------------------------------------------
