@@ -9,8 +9,8 @@ class Cuenta(ABC):
         self.__saldo = saldo
         self.__tipo = tipo
 
-    def settitular(self, titular):
-        self.__titular = titular
+    def setsaldo(self, saldo):
+        self.__saldo = saldo
     
     def gettitular(self):
         return self.__titular
