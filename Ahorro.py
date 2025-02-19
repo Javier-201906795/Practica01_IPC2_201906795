@@ -2,8 +2,8 @@ from Cuenta import Cuenta
 
 #Clase Herencia
 class CuentaAhorro(Cuenta):
-    def __init__(self, titular, numero, saldo, interes):
-        super().__init__(titular, numero, saldo)
+    def __init__(self, numerocuenta, titular, saldo, interes):
+        super().__init__(numerocuenta, titular, saldo,'Ahorro')
         self.__interes = interes
 
     def setinteres(self, interes):
@@ -13,4 +13,4 @@ class CuentaAhorro(Cuenta):
         return self.__interes
     
     def informacion(self):
-        return f'Cuenta No: {self.numero}, Tipo: Ahorro, Titular: {self.titular}, Saldo: {self.saldo}, Interés: {self.__interes}%'
+        return f'Cuenta No: {self.getnumerocuenta()}, Tipo: {self.gettipo()}, Titular: {self.gettitular()}, Saldo: {self.getsaldo()}, Interés: {self.getinteres()}%'
