@@ -95,7 +95,8 @@ if __name__ == "__main__":
                     Vercuentas()
                     gestionarcuenta()
                 elif opcion3 == 2:
-                    print('dos')
+                    tipo = tipodecuenta()
+                    gestionarcuenta()
                 elif opcion3 == 3:
                     print('tres')
                 elif opcion3 == 4:
