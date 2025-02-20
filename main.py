@@ -123,17 +123,16 @@ if __name__ == "__main__":
                             print(cuenta.mostarinformacion())
                         print('_____________________________')
                     elif tipo =='Monetaria':
-                        print('monetaria...')
                         listacuentas = Vercuentas(tipo)
-                        #Imprimir cuentas Ahorro
-                        print('_____ Cuentas de ahorro ____ ')
+                        #Imprimir cuentas Monetaria
+                        print('_____ Cuentas de Monetaria ____ ')
                         for datacuenta in listacuentas:
                             nocuenta = datacuenta[0]
                             cuenta = datacuenta[1]
                             print('Cuenta No. ', nocuenta)
                             print(cuenta.mostarinformacion())
                         print('_____________________________')
-
+                    #Selecionar cuenta a depositar
                     gestionarcuenta()
                 elif opcion3 == 3:
                     print('tres')
