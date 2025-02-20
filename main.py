@@ -21,7 +21,6 @@ def ValidarID():
     while True:
         NuevoID = generarID()
         for cuenta in DBCuentas:
-            print(cuenta.getid())
             if cuenta.getid() == NuevoID:
                 bandera = True
         
@@ -46,6 +45,10 @@ if __name__ == "__main__":
 
     #Javier Yllescas carne: 201906795
     javieryllescas()
+
+    ##Cuentas Creadas automaticas
+    DBCuentas.append(CuentaAhorro(ValidarID(),"Juan Lopez", 1000, 0.05))
+    DBCuentas.append(CuentaMonetaria(ValidarID(),"Carlos Herrera", 2000, 100))
 
 
     while True:
