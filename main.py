@@ -110,7 +110,7 @@ if __name__ == "__main__":
                 elif opcion3 == 2:
                     #Depositar
                     tipo = tipodecuenta()
-                    print('YIPO: ',tipo)
+                    print('TIPO: ',tipo)
                     #FILTRAR
                     if tipo == 'Ahorro':
                         listacuentas = Vercuentas(tipo)
@@ -125,7 +125,7 @@ if __name__ == "__main__":
                     elif tipo =='Monetaria':
                         listacuentas = Vercuentas(tipo)
                         #Imprimir cuentas Monetaria
-                        print('_____ Cuentas de Monetaria ____ ')
+                        print('_____ Cuentas Monetaria ____ ')
                         for datacuenta in listacuentas:
                             nocuenta = datacuenta[0]
                             cuenta = datacuenta[1]
@@ -145,7 +145,42 @@ if __name__ == "__main__":
 
                     gestionarcuenta()
                 elif opcion3 == 3:
-                    print('tres')
+                    #Retirar
+                    tipo = tipodecuenta()
+                    print('TIPO: ',tipo)
+                    #FILTRAR
+                    if tipo == 'Ahorro':
+                        listacuentas = Vercuentas(tipo)
+                        #Imprimir cuentas Ahorro
+                        print('_____ Cuentas de ahorro ____ ')
+                        for datacuenta in listacuentas:
+                            nocuenta = datacuenta[0]
+                            cuenta = datacuenta[1]
+                            print('Cuenta No. ', nocuenta)
+                            print(cuenta.mostarinformacion())
+                        print('_____________________________')
+                    elif tipo =='Monetaria':
+                        listacuentas = Vercuentas(tipo)
+                        #Imprimir cuentas Monetaria
+                        print('_____ Cuentas Monetaria ____ ')
+                        for datacuenta in listacuentas:
+                            nocuenta = datacuenta[0]
+                            cuenta = datacuenta[1]
+                            print('Cuenta No. ', nocuenta)
+                            print(cuenta.mostarinformacion())
+                        print('_____________________________')
+                    #Selecionar cuenta a depositar
+                    cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
+                    print(DBCuentas[int(cuentaNumero)].mostarinformacion())
+                    #Ingrese cantidad
+                    cantidad = ingreseunnumerofloat('Ingrese la cantidad a Retirar ')
+                    #Depositar
+                    DBCuentas[int(cuentaNumero)].retirar(cantidad)
+                    #Mostrar Saldo
+                    print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    
+
+                    gestionarcuenta()
                 elif opcion3 == 4:
                     print('Regresando...')
                     break
