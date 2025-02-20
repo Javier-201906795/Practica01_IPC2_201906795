@@ -13,15 +13,14 @@ if __name__ == "__main__":
 
     #Menu
     menubancario()
-
-    #Abrir cuenta
-    abrircuenta()
-    abricuentatipo()
-    titular, saldo = abrircuentaAhorro()
-    print(titular, saldo)
-    gestionarcuenta()
-
-
+#----------------------------------------------------------------
+    # #Abrir cuenta
+    # abrircuenta()
+    # abricuentatipo()
+    # titular, saldo = abrircuentaAhorro()
+    # print(titular, saldo)
+    # gestionarcuenta()
+#----------------------------------------------------------------
     
 
     # #Crear cuenta
