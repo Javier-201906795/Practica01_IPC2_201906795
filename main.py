@@ -135,6 +135,14 @@ if __name__ == "__main__":
                     #Selecionar cuenta a depositar
                     cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
                     print(DBCuentas[int(cuentaNumero)].mostarinformacion())
+                    #Ingrese cantidad
+                    cantidad = ingreseunnumerofloat('Ingrese la cantidad a depositar: ')
+                    #Depositar
+                    DBCuentas[int(cuentaNumero)].depositar(cantidad)
+                    #Mostrar Saldo
+                    print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    
+
                     gestionarcuenta()
                 elif opcion3 == 3:
                     print('tres')
