@@ -65,12 +65,13 @@ def ingreseunnumeroInt(mensaje):
 
 
 def gestionarcuenta():
-    print('=== [ MENU BANCARIO/ Gestionar Cuenta ] ===')
-    print('| 1. Ver informacion de Cuentas           |')
-    print('| 2. Depositar dinero                     |')
-    print('| 3. Retirar dinero                       |')
-    print('| 4. Regresar                             |')
-    print('===========================================')
+    print('=== [ MENU BANCARIO/ Gestionar Cuenta ] =======')
+    print('| 1. Ver informacion de Cuentas               |')
+    print('| 2. Depositar dinero                         |')
+    print('| 3. Retirar dinero                           |')
+    print('| 4. Calcular interes (Solo cuenta de ahorro) |')
+    print('| 5. Regresar                                 |')
+    print('===============================================')
 
 def tipodecuenta():
     tipo = None

@@ -99,14 +99,14 @@ if __name__ == "__main__":
                     print('¡¡ Opcion Invalida.. !!')
         elif opcion == 2:
             #Menu
-            gestionarcuenta()
+            
             while True:
+                gestionarcuenta()
                 opcion3 = ingreseUnaOpcion()
 
                 if opcion3 == 1:
                     #Listar cuentas
                     Vercuentastodas()
-                    gestionarcuenta()
                 elif opcion3 == 2:
                     #Depositar
                     tipo = tipodecuenta()
@@ -133,7 +133,7 @@ if __name__ == "__main__":
                             print(cuenta.mostarinformacion())
                         print('_____________________________')
                     #Selecionar cuenta a depositar
-                    cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
+                    cuentaNumero = ingreseunnumeroInt(f'Seleccione el No. de cuenta [0-{len(DBCuentas) - 1}]: ')
                     print(DBCuentas[int(cuentaNumero)].mostarinformacion())
                     #Ingrese cantidad
                     cantidad = ingreseunnumerofloat('Ingrese la cantidad a depositar: ')
@@ -143,7 +143,7 @@ if __name__ == "__main__":
                     print(DBCuentas[int(cuentaNumero)].mostarsaldo())
                     
 
-                    gestionarcuenta()
+                    
                 elif opcion3 == 3:
                     #Retirar
                     tipo = tipodecuenta()
@@ -169,19 +169,38 @@ if __name__ == "__main__":
                             print('Cuenta No. ', nocuenta)
                             print(cuenta.mostarinformacion())
                         print('_____________________________')
-                    #Selecionar cuenta a depositar
-                    cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
+                    #Selecionar cuenta 
+                    cuentaNumero = ingreseunnumeroInt(f'Seleccione el No. [0-{len(DBCuentas) - 1}]')
                     print(DBCuentas[int(cuentaNumero)].mostarinformacion())
                     #Ingrese cantidad
-                    cantidad = ingreseunnumerofloat('Ingrese la cantidad a Retirar ')
+                    cantidad = ingreseunnumerofloat('Ingrese la cantidad a Retirar: ')
                     #Depositar
                     DBCuentas[int(cuentaNumero)].retirar(cantidad)
                     #Mostrar Saldo
                     print(DBCuentas[int(cuentaNumero)].mostarsaldo())
                     
 
-                    gestionarcuenta()
+                    
                 elif opcion3 == 4:
+                    #FILTRAR
+                    tipo = 'Ahorro'
+                    listacuentas = Vercuentas(tipo)
+                    #Imprimir cuentas Ahorro
+                    print('_____ Cuentas de ahorro ____ ')
+                    for datacuenta in listacuentas:
+                        nocuenta = datacuenta[0]
+                        cuenta = datacuenta[1]
+                        print('Cuenta No. ', nocuenta)
+                        print(cuenta.mostarinformacion())
+                    print('_____________________________')
+                    #Selecionar cuenta 
+                    cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
+                    print(DBCuentas[int(cuentaNumero)].mostarinformacion())
+                    #Agregar interes
+                    DBCuentas[int(cuentaNumero)].calcularinteres()
+                    #Mostrar Saldo
+                    print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                elif opcion3 == 5:
                     print('Regresando...')
                     break
                 else:
