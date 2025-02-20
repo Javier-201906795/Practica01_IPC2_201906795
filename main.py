@@ -32,13 +32,25 @@ def ValidarID():
 
 def Vercuentas():
     if len(DBCuentas) > 0:
-        a = 0
+        a = -1
         for cuenta in DBCuentas:
             a += 1
             print('CUENTA NO:', a,'->')
             print(cuenta.mostarinformacion())
     else:
         print('¡¡ No hay cuentas registradas. !!')
+
+
+def Vercuentasahorro():
+    lista = []
+    a = -1
+    for cuenta in DBCuentas:
+        a += 1
+        if cuenta.gettipo() == 'Ahorro':
+            lista.append([a,cuenta])
+    
+    return lista
+    
 
 
 if __name__ == "__main__":
@@ -92,10 +104,22 @@ if __name__ == "__main__":
                 opcion3 = ingreseUnaOpcion()
 
                 if opcion3 == 1:
+                    #Listar cuentas
                     Vercuentas()
                     gestionarcuenta()
                 elif opcion3 == 2:
+                    #Depositar
                     tipo = tipodecuenta()
+                    listacuentas = Vercuentasahorro()
+                    #Imprimir cuentas Ahorro
+                    print('_____ Cuentas de ahorro ____ ')
+                    for datacuenta in listacuentas:
+                        nocuenta = datacuenta[0]
+                        cuenta = datacuenta[1]
+                        print('Cuenta No. ', nocuenta)
+                        print(cuenta.mostarinformacion())
+                    print('_____________________________')
+
                     gestionarcuenta()
                 elif opcion3 == 3:
                     print('tres')
