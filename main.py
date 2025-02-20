@@ -32,7 +32,7 @@ def ValidarID():
 
 def Vercuentas():
     if len(DBCuentas) > 0:
-        a = -1
+        a = 0
         for cuenta in DBCuentas:
             a += 1
             print('CUENTA NO:', a,'->')
