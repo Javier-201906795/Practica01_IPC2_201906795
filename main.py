@@ -30,6 +30,18 @@ def ValidarID():
                 
     return NuevoID
 
+
+def Vercuentas():
+    if len(DBCuentas) > 0:
+        a = -1
+        for cuenta in DBCuentas:
+            a += 1
+            print('CUENTA NO:', a,'->')
+            print(cuenta.mostarinformacion())
+    else:
+        print('¡¡ No hay cuentas registradas. !!')
+
+
 if __name__ == "__main__":
 
     #Javier Yllescas carne: 201906795
@@ -71,7 +83,24 @@ if __name__ == "__main__":
                 else: 
                     print('¡¡ Opcion Invalida.. !!')
         elif opcion == 2:
-            print('Dos')
+            #Menu
+            gestionarcuenta()
+            while True:
+                opcion3 = ingreseUnaOpcion()
+
+                if opcion3 == 1:
+                    Vercuentas()
+                    gestionarcuenta()
+                elif opcion3 == 2:
+                    print('dos')
+                elif opcion3 == 3:
+                    print('tres')
+                elif opcion3 == 4:
+                    print('Regresando...')
+                    break
+                else:
+                    print('¡¡ Opcion Invalida.. !!')
+
         elif opcion == 3:
             print('Gracias por todo adios! Saliendo...')
             break
