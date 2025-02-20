@@ -26,8 +26,11 @@ if __name__ == "__main__":
                 opcion2 = ingreseUnaOpcion()
                 if opcion2 == 1:
                     #CUENTA AHORRO
+                    #obtener datos
                     titular, saldo, tipo, interes = abrircuentaAhorro()
-                    print(titular, saldo, tipo, interes)
+                    #CrearCuentaAhorro
+                    DBCuentas.append(CuentaAhorro(1,'Juan Lopez', 1000, 0.1))
+                    print(DBCuentas[-1].mostarinformacion())
                 elif opcion2 == 2:
                     #CUENTA MONETARIA  
                     print('2Dos')

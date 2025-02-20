@@ -31,6 +31,7 @@ def abrircuentaAhorro():
     titular, saldo = obtenerdatoscuenta()
     tipo = 'Ahorro'
     interes = ingreseunnumerofloat('Ingrese el interes en % : ')
+    interes = interes/100
     return titular, saldo, tipo, interes
 
 
