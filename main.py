@@ -80,9 +80,9 @@ if __name__ == "__main__":
 
     #----------------------------------------------------------------
 
-    print("hola mundo")
-    crearcuentaahorro()
-    crearcuentamonetaria()
+    # print("hola mundo")
+    # crearcuentaahorro()
+    # crearcuentamonetaria()
 
     #----------------------------------------------------------------
 
