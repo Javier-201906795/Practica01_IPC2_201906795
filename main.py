@@ -3,9 +3,32 @@ from Monetaria import CuentaMonetaria
 from FuncionesCuenta import *
 from MensajesConsola import *
 from Validadores import *
+import secrets
+
 
 #Base de Datos Cuentas
 DBCuentas = []
+
+def generarID():
+    numero_aleatorio = secrets.randbelow(10**16)
+    numero_aleatorio = str(numero_aleatorio).zfill(16)
+    return numero_aleatorio
+
+def ValidarID():
+    ID = None
+    bandera = False 
+    NuevoID = None
+    while True:
+        NuevoID = generarID()
+        for cuenta in DBCuentas:
+            print(cuenta.getid())
+            if cuenta.getid() == NuevoID:
+                bandera = True
+        
+        if bandera == False:
+            break
+                
+    return NuevoID
 
 if __name__ == "__main__":
 
@@ -29,7 +52,9 @@ if __name__ == "__main__":
                     #obtener datos
                     titular, saldo, tipo, interes = abrircuentaAhorro()
                     #CrearCuentaAhorro
-                    DBCuentas.append(CuentaAhorro(1,'Juan Lopez', 1000, 0.1))
+                    ID = ValidarID()
+                    DBCuentas.append(CuentaAhorro(ID,titular, saldo, interes))
+                    #imprimir info
                     print(DBCuentas[-1].mostarinformacion())
                 elif opcion2 == 2:
                     #CUENTA MONETARIA  
