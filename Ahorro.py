@@ -20,7 +20,7 @@ class CuentaAhorro(Cuenta):
         return 'Ahorro'
 
     def mostarinformacion(self):
-        return f'-------------\n Cuenta No: {self.getnumerocuenta()},\n Tipo: {self.gettipo()},\n Titular: {self.gettitular()},\n Saldo: {self.getsaldo()},\n Interés: {self.getinteres()}% \n -------------'
+        return f'-------------\n Cuenta No: {self.getnumerocuenta()},\n Tipo: {self.gettipo()},\n Titular: {self.gettitular()},\n Saldo: {self.getsaldo()},\n Interés: {self.getinteres()*100} % \n -------------'
 
     def mostarsaldo(self):
         return f'Saldo: {self.getsaldo()}'
