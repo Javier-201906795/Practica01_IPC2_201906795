@@ -20,27 +20,29 @@ if __name__ == "__main__":
         opcion = ingreseUnaOpcion()
 
         if opcion == 1:
-            print('Uno')
+            while True:
+                abricuentatipo()
+                opcion2 = ingreseUnaOpcion()
+                if opcion2 == 1:
+                    print('1Uno')
+                elif opcion2 == 2:
+                    print('2Dos')
+                elif opcion2 == 3:
+                    print('Regresando...')        
+                    break
+                else: 
+                    print('¡¡ Opcion Invalida.. !!')
         elif opcion == 2:
             print('Dos')
         elif opcion == 3:
-            print('Tres')
+            print('Gracias por todo adios! Saliendo...')
             break
         else:
             print('¡¡ Opcion Invalida !!')
 
         
 
-        # txtopcion = input('Seleccione una opcion: ')
-        
-
-        # ValidarNumeroEntero(txtopcion, menubancario)
-
-        # if (esNumeroEntero(txtopcion) == True):
-        #     opcion = int(txtopcion)
-        # else:
-        #     print('Ingreso una opcion invalida!')
-            
+       
 
 
 
