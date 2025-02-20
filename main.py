@@ -30,7 +30,7 @@ def ValidarID():
     return NuevoID
 
 
-def Vercuentas():
+def Vercuentastodas():
     if len(DBCuentas) > 0:
         a = -1
         for cuenta in DBCuentas:
@@ -105,7 +105,7 @@ if __name__ == "__main__":
 
                 if opcion3 == 1:
                     #Listar cuentas
-                    Vercuentas()
+                    Vercuentastodas()
                     gestionarcuenta()
                 elif opcion3 == 2:
                     #Depositar
@@ -133,6 +133,8 @@ if __name__ == "__main__":
                             print(cuenta.mostarinformacion())
                         print('_____________________________')
                     #Selecionar cuenta a depositar
+                    cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
+                    print(DBCuentas[int(cuentaNumero)].mostarinformacion())
                     gestionarcuenta()
                 elif opcion3 == 3:
                     print('tres')

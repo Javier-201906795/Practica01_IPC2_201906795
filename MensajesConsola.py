@@ -52,6 +52,17 @@ def ingreseunnumerofloat(mensaje):
             break
     return numero
 
+def ingreseunnumeroInt(mensaje):
+    numero = None
+    while True:
+        posiblenumero = input(mensaje)
+        if (ValidarNumeroEntero(posiblenumero)== None):
+            print('¡¡Debe ingresar un numero Entero!!')
+        else:
+            numero = int(posiblenumero)
+            break
+    return numero
+
 
 def gestionarcuenta():
     print('=== [ MENU BANCARIO/ Gestionar Cuenta ] ===')
