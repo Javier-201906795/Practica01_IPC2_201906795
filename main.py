@@ -41,12 +41,12 @@ def Vercuentas():
         print('¡¡ No hay cuentas registradas. !!')
 
 
-def Vercuentasahorro():
+def Vercuentas(tipo):
     lista = []
     a = -1
     for cuenta in DBCuentas:
         a += 1
-        if cuenta.gettipo() == 'Ahorro':
+        if cuenta.gettipo() == tipo:
             lista.append([a,cuenta])
     
     return lista
@@ -110,10 +110,10 @@ if __name__ == "__main__":
                 elif opcion3 == 2:
                     #Depositar
                     tipo = tipodecuenta()
-
+                    print('YIPO: ',tipo)
                     #FILTRAR
-                    if tipo == 'ahorro':
-                        listacuentas = Vercuentasahorro()
+                    if tipo == 'Ahorro':
+                        listacuentas = Vercuentas(tipo)
                         #Imprimir cuentas Ahorro
                         print('_____ Cuentas de ahorro ____ ')
                         for datacuenta in listacuentas:
@@ -122,8 +122,17 @@ if __name__ == "__main__":
                             print('Cuenta No. ', nocuenta)
                             print(cuenta.mostarinformacion())
                         print('_____________________________')
-                    elif tipo =='monetaria':
+                    elif tipo =='Monetaria':
                         print('monetaria...')
+                        listacuentas = Vercuentas(tipo)
+                        #Imprimir cuentas Ahorro
+                        print('_____ Cuentas de ahorro ____ ')
+                        for datacuenta in listacuentas:
+                            nocuenta = datacuenta[0]
+                            cuenta = datacuenta[1]
+                            print('Cuenta No. ', nocuenta)
+                            print(cuenta.mostarinformacion())
+                        print('_____________________________')
 
                     gestionarcuenta()
                 elif opcion3 == 3:

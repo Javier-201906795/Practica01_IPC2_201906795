@@ -66,11 +66,13 @@ def tipodecuenta():
     while True:
         txttipo = input('En que tipo de cuenta quiere depositar? Ahorro / Monetaria:  ')
         if txttipo.lower() == 'ahorro':
+            tipo = 'Ahorro'
             break
         elif txttipo.lower() == 'monetaria':
+            tipo = 'Monetaria'
             break
         else:
             print('Ingrese Ahorro ó Monetaria')
-    tipo = txttipo.lower()
+    
 
     return tipo
