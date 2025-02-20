@@ -110,15 +110,20 @@ if __name__ == "__main__":
                 elif opcion3 == 2:
                     #Depositar
                     tipo = tipodecuenta()
-                    listacuentas = Vercuentasahorro()
-                    #Imprimir cuentas Ahorro
-                    print('_____ Cuentas de ahorro ____ ')
-                    for datacuenta in listacuentas:
-                        nocuenta = datacuenta[0]
-                        cuenta = datacuenta[1]
-                        print('Cuenta No. ', nocuenta)
-                        print(cuenta.mostarinformacion())
-                    print('_____________________________')
+
+                    #FILTRAR
+                    if tipo == 'ahorro':
+                        listacuentas = Vercuentasahorro()
+                        #Imprimir cuentas Ahorro
+                        print('_____ Cuentas de ahorro ____ ')
+                        for datacuenta in listacuentas:
+                            nocuenta = datacuenta[0]
+                            cuenta = datacuenta[1]
+                            print('Cuenta No. ', nocuenta)
+                            print(cuenta.mostarinformacion())
+                        print('_____________________________')
+                    elif tipo =='monetaria':
+                        print('monetaria...')
 
                     gestionarcuenta()
                 elif opcion3 == 3:

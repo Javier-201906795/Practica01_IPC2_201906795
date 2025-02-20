@@ -62,13 +62,15 @@ def gestionarcuenta():
     print('===========================================')
 
 def tipodecuenta():
+    tipo = None
     while True:
         txttipo = input('En que tipo de cuenta quiere depositar? Ahorro / Monetaria:  ')
         if txttipo.lower() == 'ahorro':
-            print('Ahorrro')
             break
         elif txttipo.lower() == 'monetaria':
-            print('Monetaria')
             break
         else:
             print('Ingrese Ahorro ó Monetaria')
+    tipo = txttipo.lower()
+
+    return tipo
