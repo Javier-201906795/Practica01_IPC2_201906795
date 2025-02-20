@@ -34,6 +34,12 @@ def abrircuentaAhorro():
     interes = interes/100
     return titular, saldo, tipo, interes
 
+def abrircuentaMonetaria():
+    titular, saldo = obtenerdatoscuenta()
+    tipo = 'Monetaria'
+    limite = ingreseunnumerofloat('Ingrese el limite financiamiento: ')
+    return titular, saldo, tipo, limite
+
 
 def ingreseunnumerofloat(mensaje):
     numero = None

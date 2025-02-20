@@ -58,7 +58,13 @@ if __name__ == "__main__":
                     print(DBCuentas[-1].mostarinformacion())
                 elif opcion2 == 2:
                     #CUENTA MONETARIA  
-                    print('2Dos')
+                    #obtener datos
+                    titular, saldo, tipo, limite = abrircuentaMonetaria()
+                    #CrearCuentaAhorro
+                    ID = ValidarID()
+                    DBCuentas.append(CuentaMonetaria(ID,titular, saldo, limite))
+                    #imprimir info
+                    print(DBCuentas[-1].mostarinformacion())
                 elif opcion2 == 3:
                     print('Regresando...')        
                     break

@@ -12,8 +12,11 @@ class CuentaMonetaria(Cuenta):
     def getlimite(self):
         return self.__limite
     
+    def getid(self):
+        return self.getnumerocuenta()
+    
     def mostarinformacion(self):
-        return f'Cuenta No: {self.getnumerocuenta()}, Tipo: {self.gettipo()}, Titular: {self.gettitular()}, Saldo: {self.getsaldo()}, Límite Adicional: {self.getlimite()}'
+        return f'------------\n Cuenta No: {self.getnumerocuenta()},\n Tipo: {self.gettipo()},\n Titular: {self.gettitular()},\n Saldo: {self.getsaldo()},\n Límite Adicional: {self.getlimite()}\n------------'
     
     def mostarsaldo(self):
         return f'Saldo: {self.getsaldo()} || Limite restante: {self.__limiterestante}'
