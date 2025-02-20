@@ -29,3 +29,10 @@ class Cuenta(ABC):
     def mostarinformacion(self):
         pass
 
+    @abstractmethod
+    def depositar(self):
+        pass
+    
+    @abstractmethod
+    def retirar(self):
+        pass
