@@ -6,7 +6,14 @@ def esNumeroEntero(texto):
         return True
     except ValueError:
         return False
-    
+
+def esNumeroFloat(texto):
+    try:
+        float(texto)
+        return True
+    except ValueError:
+        return False
+
 def ValidarNumeroEntero(texto):
     if esNumeroEntero(texto) == True :
         return int(texto)
@@ -19,9 +26,12 @@ def ingreseUnaOpcion():
     return ValidarNumeroEntero(txtopcion)
 
 def ValidarNumeroFloat(texto):
-    if esNumeroEntero(texto) == True :
+    if esNumeroFloat(texto) == True :
         return float(texto)
     else:
         print('¡¡¡ Ingrese un Valor Numerico !!!')
+        return None
+
+
 
   
