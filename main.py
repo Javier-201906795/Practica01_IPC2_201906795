@@ -134,13 +134,18 @@ if __name__ == "__main__":
                         print('_____________________________')
                     #Selecionar cuenta a depositar
                     cuentaNumero = ingreseunnumeroInt(f'Seleccione el No. de cuenta [0-{len(DBCuentas) - 1}]: ')
-                    print(DBCuentas[int(cuentaNumero)].mostarinformacion())
-                    #Ingrese cantidad
-                    cantidad = ingreseunnumerofloat('Ingrese la cantidad a depositar: ')
-                    #Depositar
-                    DBCuentas[int(cuentaNumero)].depositar(cantidad)
-                    #Mostrar Saldo
-                    print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    try:
+                        print(DBCuentas[int(cuentaNumero)].mostarinformacion())
+                        #Ingrese cantidad
+                        cantidad = ingreseunnumerofloat('Ingrese la cantidad a depositar: ')
+                        #Depositar
+                        DBCuentas[int(cuentaNumero)].depositar(cantidad)
+                        #Mostrar Saldo
+                        print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    except Exception as e:
+                        print('*********************************************')
+                        print('* No se encontro la cuenta intente otra vez *')
+                        print('*********************************************')
                     
 
                     
@@ -171,13 +176,18 @@ if __name__ == "__main__":
                         print('_____________________________')
                     #Selecionar cuenta 
                     cuentaNumero = ingreseunnumeroInt(f'Seleccione el No. [0-{len(DBCuentas) - 1}]')
-                    print(DBCuentas[int(cuentaNumero)].mostarinformacion())
-                    #Ingrese cantidad
-                    cantidad = ingreseunnumerofloat('Ingrese la cantidad a Retirar: ')
-                    #Depositar
-                    DBCuentas[int(cuentaNumero)].retirar(cantidad)
-                    #Mostrar Saldo
-                    print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    try:
+                        print(DBCuentas[int(cuentaNumero)].mostarinformacion())
+                        #Ingrese cantidad
+                        cantidad = ingreseunnumerofloat('Ingrese la cantidad a Retirar: ')
+                        #Depositar
+                        DBCuentas[int(cuentaNumero)].retirar(cantidad)
+                        #Mostrar Saldo
+                        print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    except Exception as e:
+                        print('*********************************************')
+                        print('* No se encontro la cuenta intente otra vez *')
+                        print('*********************************************')
                     
 
                     
@@ -194,12 +204,17 @@ if __name__ == "__main__":
                         print(cuenta.mostarinformacion())
                     print('_____________________________')
                     #Selecionar cuenta 
-                    cuentaNumero = ingreseunnumeroInt('Seleccione el No. de cuenta: ')
-                    print(DBCuentas[int(cuentaNumero)].mostarinformacion())
-                    #Agregar interes
-                    DBCuentas[int(cuentaNumero)].calcularinteres()
-                    #Mostrar Saldo
-                    print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    cuentaNumero = ingreseunnumeroInt(f'Seleccione el No. [0-{len(DBCuentas) - 1}]')
+                    try:
+                        print(DBCuentas[int(cuentaNumero)].mostarinformacion())
+                        #Agregar interes
+                        DBCuentas[int(cuentaNumero)].calcularinteres()
+                        #Mostrar Saldo
+                        print(DBCuentas[int(cuentaNumero)].mostarsaldo())
+                    except Exception as e:
+                        print('*********************************************')
+                        print('* No se encontro la cuenta intente otra vez *')
+                        print('*********************************************')
                 elif opcion3 == 5:
                     print('Regresando...')
                     break
