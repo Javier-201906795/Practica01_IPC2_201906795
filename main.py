@@ -11,8 +11,12 @@ if __name__ == "__main__":
     #Javier Yllescas carne: 201906795
     javieryllescas()
 
-    #Menu
-    menubancario()
+
+    while True:
+        #Menu
+        menubancario()
+
+        opcion = int(input('Seleccione una opcion: '))
 
 
 
@@ -21,9 +25,6 @@ if __name__ == "__main__":
 
 
 
-
-
-    
 #----------------------------------------------------------------
     # #Abrir cuenta
     # abrircuenta()
