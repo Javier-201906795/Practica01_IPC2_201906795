@@ -17,11 +17,29 @@ if __name__ == "__main__":
         #Menu
         menubancario()
 
-        txtopcion = input('Seleccione una opcion: ')
-        if (esNumeroEntero(txtopcion) == True):
-            opcion = int(txtopcion)
+        opcion = ingreseUnaOpcion()
+
+        if opcion == 1:
+            print('Uno')
+        elif opcion == 2:
+            print('Dos')
+        elif opcion == 3:
+            print('Tres')
+            break
         else:
-            print('Ingreso una opcion invalida!')
+            print('¡¡ Opcion Invalida !!')
+
+        
+
+        # txtopcion = input('Seleccione una opcion: ')
+        
+
+        # ValidarNumeroEntero(txtopcion, menubancario)
+
+        # if (esNumeroEntero(txtopcion) == True):
+        #     opcion = int(txtopcion)
+        # else:
+        #     print('Ingreso una opcion invalida!')
             
 
 
