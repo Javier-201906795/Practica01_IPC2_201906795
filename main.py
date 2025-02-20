@@ -2,6 +2,7 @@ from Ahorro import CuentaAhorro
 from Monetaria import CuentaMonetaria
 from FuncionesCuenta import *
 from MensajesConsola import *
+from Validadores import *
 
 #Base de Datos Cuentas
 DBCuentas = []
@@ -16,8 +17,12 @@ if __name__ == "__main__":
         #Menu
         menubancario()
 
-        opcion = int(input('Seleccione una opcion: '))
-
+        txtopcion = input('Seleccione una opcion: ')
+        if (esNumeroEntero(txtopcion) == True):
+            opcion = int(txtopcion)
+        else:
+            print('Ingreso una opcion invalida!')
+            
 
 
 
