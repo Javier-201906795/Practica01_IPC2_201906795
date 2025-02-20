@@ -20,12 +20,16 @@ if __name__ == "__main__":
         opcion = ingreseUnaOpcion()
 
         if opcion == 1:
+            #ABRIR CUENTA
             while True:
                 abricuentatipo()
                 opcion2 = ingreseUnaOpcion()
                 if opcion2 == 1:
-                    print('1Uno')
+                    #CUENTA AHORRO
+                    titular, saldo, tipo, interes = abrircuentaAhorro()
+                    print(titular, saldo, tipo, interes)
                 elif opcion2 == 2:
+                    #CUENTA MONETARIA  
                     print('2Dos')
                 elif opcion2 == 3:
                     print('Regresando...')        

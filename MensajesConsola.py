@@ -1,4 +1,4 @@
-
+from Validadores import *
 
 def javieryllescas():
     print('Practica 1 de IPC2')
@@ -21,10 +21,20 @@ def abricuentatipo():
     print('| 3. Regresar                         |')
     print('=======================================')
 
-def abrircuentaAhorro():
+
+def obtenerdatoscuenta():
     titular = input("Ingrese un nombre: ")
     saldo = input('Saldo disponible: ')
     return titular, saldo
+
+def abrircuentaAhorro():
+    titular, saldo = obtenerdatoscuenta()
+    tipo = 'Ahorro'
+    interes = input('Ingrese el interes en % : ')
+    return titular, saldo, tipo, interes
+
+
+
 
 def gestionarcuenta():
     print('=== [ MENU BANCARIO/ Gestionar Cuenta ] ===')

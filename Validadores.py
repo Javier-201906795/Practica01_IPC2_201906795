@@ -17,3 +17,11 @@ def ValidarNumeroEntero(texto):
 def ingreseUnaOpcion():
     txtopcion = input('Seleccione una opcion: ')
     return ValidarNumeroEntero(txtopcion)
+
+def ValidarNumeroFloat(texto):
+    if esNumeroEntero(texto) == True :
+        return float(texto)
+    else:
+        print('¡¡¡ Ingrese un Valor Numerico !!!')
+
+  
